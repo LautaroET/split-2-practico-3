@@ -10,6 +10,6 @@ export function renderizarSuperheroe(superheroe){
         Enemigos:superheroe.enemigos
     };
 }
-export function renderizarListaSuperheroe(superheroes){
+export function renderizarListaSuperheroes(superheroes){
     return superheroes.map(superheroe=>renderizarSuperheroe(superheroe));
 };
