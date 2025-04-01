@@ -1,5 +1,5 @@
 import express from 'express'
-import {obtenerSuperHeroePorIdController,obtenerTodosLosSuperHeroesController,buscarSuperHeroesPorAtributosController,obtenerSuperHeroesMayoresDe30Controller} from '../controllers/superheroesController.mjs'
+import {obtenerSuperHeroePorIdController,obtenerTodosLosSuperHeroesController,buscarSuperHeroesPorAtributosController,obtenerSuperHeroesMayoresDe30Controller} from '../controllers/superheroesControllers.mjs'
 const router = express.Router();
 router.get('/heroes',obtenerTodosLosSuperHeroesController);
 router.get('/heroes/:id',obtenerSuperHeroePorIdController);
