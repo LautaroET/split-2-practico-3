@@ -1,5 +1,6 @@
 import mongoose  from "mongoose";
 const superheroSchema = new mongoose.Schema({
+    id : {type:String,required:true},
     nombreSuperHeroe : {type:String,required:true},
     nombreReal:{type:String,required:true},
     edad:{type:Number,min :0},
