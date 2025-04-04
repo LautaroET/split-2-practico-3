@@ -1,14 +1,17 @@
-import IRepository from './IRepository.mjs';
 import SuperHero from '../models/SuperHero.mjs';
-
-class SuperHeroRepository extends IRepository {
-    async obtenerTodos() {
-        try {
-            return await SuperHero.find();
-        } catch (error) {
-            throw new Error('Error al obtener los superhéroes: ' + error.message);
-        }
+import IRepository from './IRepository.mjs';
+class SuperHeroRepository extends IRepository{
+    async obtenerPorId(id) {
+        return await SuperHero.findById(id);
+    }
+    async obtenerTodos(){
+        return await SuperHero.find({});
+    }
+    async buscarPorAtributo(atributo,valor){
+        RESOLVER
+    }
+    async obtenerMayoresDe30(){
+        RESOLVER
     }
 }
-
-export default SuperHeroRepository;
+export default new SuperHeroRepository();
